@@ -18,12 +18,14 @@ import time
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 # Channel Access Token
-line_bot_api = LineBotApi(os.getenv('qrW1maNEjg90yYBO1vBMfANGOpRa5QziG890rNos7GGz483I1Iaig0OtnYmz99GEJUwTyF7wjc+UoJVSFi4RS3M4ldVUkMunLh3ltaEOqUx6ZfOp6QHGuCkiS8BuKN4KnwWcyKXNtbR2bGRvkj1gXQdB04t89/1O/w1cDnyilFU='))
+line_bot_api = LineBotApi(os.getenv(''))
+#(Channel Access Token)qrW1maNEjg90yYBO1vBMfANGOpRa5QziG890rNos7GGz483I1Iaig0OtnYmz99GEJUwTyF7wjc+UoJVSFi4RS3M4ldVUkMunLh3ltaEOqUx6ZfOp6QHGuCkiS8BuKN4KnwWcyKXNtbR2bGRvkj1gXQdB04t89/1O/w1cDnyilFU=
 # Channel Secret
 handler = WebhookHandler(os.getenv('9a63b71fa52c3a8633a185964380a6ee'))
+#9a63b71fa52c3a8633a185964380a6ee (line secret)
 # OPENAI API Key初始化設定
-openai.api_key = os.getenv('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')
-
+openai.api_key = os.getenv('')
+#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 (open api key)
 
 def GPT_response(text):
     # 接收回應
